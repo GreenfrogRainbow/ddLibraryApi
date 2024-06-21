@@ -4,7 +4,7 @@ const router = express.Router()
 const recommendHandler = require('../router_handler/recommend')
 
 
-router.get('/getRecommendList', recommendHandler.getRecommendList)
+
 
 router.get('/getAllBooks', recommendHandler.getAllBooks)
 router.get('/getMaxPageNum', recommendHandler.getMaxPageNum)

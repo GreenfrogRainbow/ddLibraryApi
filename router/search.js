@@ -4,6 +4,8 @@ const router = express.Router()
 
 const searchHandler = require('../router_handler/search')
 
+router.get('/getRecommendList', searchHandler.getRecommendList)
+
 router.get('/getBooksResult', searchHandler.getBooksResult)
 router.get('/getBooksResults', searchHandler.getBooksResults)
 router.get('/getBooksResultsPages', searchHandler.getBooksResultsPages)

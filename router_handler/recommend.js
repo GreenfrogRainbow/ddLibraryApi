@@ -1,24 +1,6 @@
 const db = require('../db/index')
 
-// getRecommendList
-exports.getRecommendList = (req, res) => {
-    // 查询语句  中间的?表示传参
-    const sql = `select * from allbooks order by id limit ?, 25`
-    
-    // db是数据库对象 .query 表示查询 (sql语句, [参数], （err, results）就是固定写法了，一个报错信息，一个结果  结果就是个列表)
-    // 你这后面好像都没啥带运算的
-    // 我的运算基本都在前端
-    // oo6
-    db.query(sql, [(parseInt(req.query.page)-1) * 25], (err, results) => {
-        if(err) return res.dd(err)
-        // 行 我断了 晚上再看看
-        res.send({
-            status: 0,
-            message: '查找成功',
-            data: results
-        })
-    })
-}
+
 
 
 // router.get('/getAllBooks', )
